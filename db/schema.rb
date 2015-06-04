@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(:version => 20101219090057) do
 
   create_table "answers", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "question_id"
+    t.integer  "user_id",                    :null => false
+    t.integer  "question_id",                :null => false
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(:version => 20101219090057) do
   end
 
   create_table "questions", :force => true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",                   :null => false
     t.text     "text"
     t.boolean  "answered"
     t.datetime "created_at"

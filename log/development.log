@@ -1,0 +1,1377 @@
+
+
+Started GET "/" for 10.107.65.204 at 2015-06-03 22:28:00 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  [1m[36mSQL (6.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" ORDER BY created_at DESC[0m
+SQLite3::SQLException: no such table: questions: SELECT     "questions".* FROM       "questions"  ORDER BY  created_at DESC
+Completed   in 65ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: questions: SELECT     "questions".* FROM       "questions"  ORDER BY  created_at DESC):
+  app/models/question.rb:81:in `filter'
+  app/controllers/questions_controller.rb:10:in `index'
+
+Rendered /usr/local/rvm/gems/ruby-2.1.1@rails320/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /usr/local/rvm/gems/ruby-2.1.1@rails320/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.8ms)
+Rendered /usr/local/rvm/gems/ruby-2.1.1@rails320/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.1ms)
+
+
+Started GET "/" for 10.107.65.204 at 2015-06-03 22:31:56 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" ORDER BY created_at DESC[0m
+SQLite3::SQLException: no such table: questions: SELECT     "questions".* FROM       "questions"  ORDER BY  created_at DESC
+Completed   in 68ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: questions: SELECT     "questions".* FROM       "questions"  ORDER BY  created_at DESC):
+  app/models/question.rb:81:in `filter'
+  app/controllers/questions_controller.rb:10:in `index'
+
+Rendered /usr/local/rvm/gems/ruby-2.1.1@rails320/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /usr/local/rvm/gems/ruby-2.1.1@rails320/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.8ms)
+Rendered /usr/local/rvm/gems/ruby-2.1.1@rails320/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.1ms)
+
+
+Started GET "/" for 10.107.65.204 at 2015-06-03 22:32:00 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" ORDER BY created_at DESC[0m
+SQLite3::SQLException: no such table: questions: SELECT     "questions".* FROM       "questions"  ORDER BY  created_at DESC
+Completed   in 29ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: questions: SELECT     "questions".* FROM       "questions"  ORDER BY  created_at DESC):
+  app/models/question.rb:81:in `filter'
+  app/controllers/questions_controller.rb:10:in `index'
+
+Rendered /usr/local/rvm/gems/ruby-2.1.1@rails320/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/local/rvm/gems/ruby-2.1.1@rails320/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.2ms)
+Rendered /usr/local/rvm/gems/ruby-2.1.1@rails320/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.9ms)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (10.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (15.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateQuestions (20101031200611)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "text" text, "answered" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101031200611')
+Migrating to CreateAnswers (20101031200655)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "question_id" integer NOT NULL, "text" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101031200655')
+Migrating to CreateUsers (20101031203901)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "email" varchar(255), "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255), "single_access_token" varchar(255), "perishable_token" varchar(255), "login_count" integer, "failed_login_count" integer, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101031203901')
+Migrating to CreateUserSessions (20101031203948)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "user_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("user_sessions")
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE INDEX "index_user_sessions_on_session_id" ON "user_sessions" ("session_id")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("user_sessions")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_user_sessions_on_session_id')[0m
+  [1m[35mSQL (0.2ms)[0m  CREATE INDEX "index_user_sessions_on_updated_at" ON "user_sessions" ("updated_at")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101031203948')[0m
+Migrating to AddTopicToQuestion (20101109041612)
+  [1m[35mSQL (0.5ms)[0m  ALTER TABLE "questions" ADD "topic" varchar(255)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101109041612')[0m
+Migrating to AddHometownAndAgeToUser (20101218022422)
+  [1m[35mSQL (0.5ms)[0m  ALTER TABLE "users" ADD "age" integer
+  [1m[36mSQL (0.3ms)[0m  [1mALTER TABLE "users" ADD "hometown" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101218022422')
+Migrating to AddNameToUser (20101218022839)
+  [1m[36mSQL (0.7ms)[0m  [1mALTER TABLE "users" ADD "name" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101218022839')
+Migrating to CreateVotesInitial (20101218053423)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "question_votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "user_id" integer, "upvote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101218053423')
+Migrating to AddViewsToQuestions (20101218055507)
+  [1m[36mSQL (0.5ms)[0m  [1mALTER TABLE "questions" ADD "views" integer[0m
+  [1m[35mSQL (3.9ms)[0m  CREATE TEMPORARY TABLE "altered_questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "text" text, "answered" boolean, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "views" integer) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("questions")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "questions"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "text" text, "answered" boolean, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "views" integer) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_questions")
+  [1m[36mSQL (0.4ms)[0m  [1mDROP TABLE "altered_questions"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101218055507')
+Migrating to ViewsDefault (20101218055756)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TEMPORARY TABLE "altered_questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "text" text, "answered" boolean, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "views" integer) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("questions")
+  [1m[36mSQL (0.3ms)[0m  [1mDROP TABLE "questions"[0m
+  [1m[35mSQL (0.3ms)[0m  CREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "text" text, "answered" boolean, "created_at" datetime, "updated_at" datetime, "title" varchar(255), "views" integer DEFAULT 0 NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("altered_questions")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_questions"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101218055756')[0m
+Migrating to RemoveAgeAddBirthdayToUser (20101218062324)
+  [1m[35mSQL (0.5ms)[0m  CREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "email" varchar(255), "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255), "single_access_token" varchar(255), "perishable_token" varchar(255), "login_count" integer, "failed_login_count" integer, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "age" integer, "hometown" varchar(255), "name" varchar(255)) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.4ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "email" varchar(255), "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255), "single_access_token" varchar(255), "perishable_token" varchar(255), "login_count" integer, "failed_login_count" integer, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "hometown" varchar(255), "name" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36mSQL (0.2ms)[0m  [1mDROP TABLE "altered_users"[0m
+  [1m[35mSQL (0.3ms)[0m  ALTER TABLE "users" ADD "birthday" date
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101218062324')[0m
+Migrating to ActsAsTaggableOnMigration (20101218095751)
+  [1m[35mSQL (0.4ms)[0m  CREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255)) 
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "taggings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "taggable_id" integer, "taggable_type" varchar(255), "tagger_id" integer, "tagger_type" varchar(255), "context" varchar(255), "created_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("taggings")
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE INDEX "index_taggings_on_tag_id" ON "taggings" ("tag_id")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("taggings")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_taggings_on_tag_id')[0m
+  [1m[35mSQL (0.2ms)[0m  CREATE INDEX "index_taggings_on_taggable_id_and_taggable_type_and_context" ON "taggings" ("taggable_id", "taggable_type", "context")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101218095751')[0m
+Migrating to ChangeUpvote (20101218195608)
+  [1m[35mSQL (0.3ms)[0m  CREATE TEMPORARY TABLE "altered_question_votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "user_id" integer, "upvote" boolean, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("question_votes")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "question_votes"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "question_votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("altered_question_votes")
+  [1m[36mSQL (0.2ms)[0m  [1mDROP TABLE "altered_question_votes"[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "question_votes" ADD "value" integer
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101218195608')[0m
+Migrating to CreateVotes (20101218230236)
+  [1m[35mSQL (0.5ms)[0m  CREATE TABLE "votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "voteable_id" integer, "voteable_type" varchar(255), "user_id" integer, "value" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20101218230236')[0m
+Migrating to AddScoreToAnswersAndQuestions (20101218233517)
+  [1m[35mSQL (0.7ms)[0m  ALTER TABLE "questions" ADD "score" integer DEFAULT 0 NOT NULL
+  [1m[36mSQL (0.4ms)[0m  [1mALTER TABLE "answers" ADD "score" integer DEFAULT 0 NOT NULL[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101218233517')
+Migrating to AddActiveAtToQuestions (20101219032348)
+  [1m[36mSQL (0.6ms)[0m  [1mALTER TABLE "questions" ADD "active_at" datetime[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101219032348')
+Migrating to CreateBadges (20101219055601)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "badges" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101219055601')
+Migrating to CreateComments (20101219081426)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "text" text, "question_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101219081426')
+Migrating to AddUserIdToComment (20101219090057)
+  [1m[36mSQL (0.5ms)[0m  [1mALTER TABLE "comments" ADD "user_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101219090057')
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("answers")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("badges")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("comments")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("question_votes")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("questions")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("taggings")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('index_taggings_on_taggable_id_and_taggable_type_and_context')
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_taggings_on_tag_id')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("tags")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("user_sessions")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('index_user_sessions_on_updated_at')
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_user_sessions_on_session_id')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("votes")[0m
+
+
+Started GET "/" for 10.107.65.204 at 2015-06-03 22:32:26 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  [1m[36mSQL (1.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" ORDER BY created_at DESC[0m
+Rendered questions/index.html.erb within layouts/application (65.5ms)
+Completed 200 OK in 151ms (Views: 71.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/questions" for 10.107.65.204 at 2015-06-03 22:32:37 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" ORDER BY created_at DESC[0m
+Rendered questions/index.html.erb within layouts/application (53.7ms)
+Completed 200 OK in 90ms (Views: 57.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/questions" for 10.107.65.204 at 2015-06-03 22:32:39 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" ORDER BY created_at DESC[0m
+Rendered questions/index.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 84ms (Views: 53.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/questions?utf8=%E2%9C%93&title_like=ror" for 10.107.65.204 at 2015-06-03 22:32:44 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  Parameters: {"utf8"=>"✓", "title_like"=>"ror"}
+  [1m[35mSQL (0.9ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE (questions.title LIKE '%ror%') ORDER BY created_at DESC[0m
+Rendered questions/index.html.erb within layouts/application (59.7ms)
+Completed 200 OK in 95ms (Views: 63.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/user_session/new" for 10.107.65.204 at 2015-06-03 22:32:47 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by UserSessionsController#new as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_user_sessions_new_html_erb___3752530814944197513_19584640_1434398422500601838 at /data/work/stack_overflow_clone/app/views/user_sessions/new.html.erb:2)
+Rendered user_sessions/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 58ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_session" for 10.107.65.204 at 2015-06-03 22:32:49 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+6P/fJcvb42FbIFgLHhO/kGQ+W6sQNpON5WzqJmBcTM=", "user_session"=>{"login"=>"vkalangi", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE (LOWER("users".login) = 'vkalangi') LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_user_sessions_new_html_erb___3752530814944197513_69956670205160_1434398422500601838 at /data/work/stack_overflow_clone/app/views/user_sessions/new.html.erb:2)
+Rendered user_sessions/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 190ms (Views: 13.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 10.107.65.204 at 2015-06-03 22:32:54 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (41.0ms)
+Rendered users/new.html.erb within layouts/application (47.1ms)
+Completed 200 OK in 91ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.107.65.204 at 2015-06-03 22:33:10 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+6P/fJcvb42FbIFgLHhO/kGQ+W6sQNpON5WzqJmBcTM=", "user"=>{"login"=>"jyothi", "email"=>"vkalangi@vmwar.ecom", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('vkalangi@vmwar.ecom')) LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('jyothi')) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."single_access_token" = '5lt5JnbffFviha5BrGqV') LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("birthday", "created_at", "crypted_password", "current_login_at", "current_login_ip", "email", "failed_login_count", "hometown", "last_login_at", "last_login_ip", "last_request_at", "login", "login_count", "name", "password_salt", "perishable_token", "persistence_token", "single_access_token", "updated_at") VALUES (NULL, '2015-06-04 05:33:10.383048', '86efaa790e0e66368ab3aba1b30f8864781fd049c75d0c3c81cc7f0ea44941790def4f5f28a4511003658e2e47f119ff2348b1b90671bce73b668b382e1d0ba3', '2015-06-04 05:33:10.382236', '10.107.65.204', 'vkalangi@vmwar.ecom', 0, NULL, NULL, NULL, '2015-06-04 05:33:10.382569', 'jyothi', 1, NULL, '-gcidhcnEVEyXKExECi4', 'wfoGEqTTdiwcCQleXaCs', '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360', '5lt5JnbffFviha5BrGqV', '2015-06-04 05:33:10.383048')[0m
+Redirected to http://10.128.95.250:3000/account
+Completed 302 Found in 86ms
+
+
+Started GET "/account" for 10.107.65.204 at 2015-06-03 22:33:10 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by UsersController#show as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:33:10.789739', "perishable_token" = '4k5N1ggx1wjz1KDeOi-p', "updated_at" = '2015-06-04 05:33:10.790446' WHERE ("users"."id" = 1)
+  [1m[36mVote Load (0.3ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes".user_id = 1)[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions".user_id = 1)[0m
+  [1m[35mBadge Load (0.3ms)[0m  SELECT "badges".* FROM "badges" WHERE ("badges".user_id = 1)
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."user_id" = 1) ORDER BY created_at DESC[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "questions" WHERE ("questions".user_id = 1)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "questions" WHERE ("questions".user_id = 1)) AS subquery[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "badges" WHERE ("badges".user_id = 1)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "badges" WHERE ("badges".user_id = 1)) AS subquery[0m
+Rendered users/show.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 212ms (Views: 19.7ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/users" for 10.107.65.204 at 2015-06-03 22:33:10 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+6P/fJcvb42FbIFgLHhO/kGQ+W6sQNpON5WzqJmBcTM=", "user"=>{"login"=>"jyothi", "email"=>"vkalangi@vmwar.ecom", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:33:11.075246', "perishable_token" = 'Y_cNEUycHmpVUk1_96d6', "updated_at" = '2015-06-04 05:33:11.075905' WHERE ("users"."id" = 1)
+DEPRECATION WARNING: Using #request_uri is deprecated. Use fullpath instead. (called from store_location at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:37)
+Redirected to http://10.128.95.250:3000/account
+Completed 302 Found in 78ms
+
+
+Started GET "/account" for 10.107.65.204 at 2015-06-03 22:33:11 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by UsersController#show as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2015-06-04 05:33:11.481999', "perishable_token" = 'smB58cV_0E6QpABN9NwA', "updated_at" = '2015-06-04 05:33:11.482660' WHERE ("users"."id" = 1)[0m
+  [1m[35mVote Load (0.4ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".user_id = 1)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions".user_id = 1)
+  [1m[36mBadge Load (0.3ms)[0m  [1mSELECT "badges".* FROM "badges" WHERE ("badges".user_id = 1)[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."user_id" = 1) ORDER BY created_at DESC
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "questions" WHERE ("questions".user_id = 1)) AS subquery[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "questions" WHERE ("questions".user_id = 1)) AS subquery
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "badges" WHERE ("badges".user_id = 1)) AS subquery[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "badges" WHERE ("badges".user_id = 1)) AS subquery
+Rendered users/show.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 178ms (Views: 17.9ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/questions/new" for 10.107.65.204 at 2015-06-03 22:33:17 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2015-06-04 05:33:17.327298', "perishable_token" = 'CE4k1oybxuLGhfG-g9gV', "updated_at" = '2015-06-04 05:33:17.327977' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = 'Question')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+Rendered questions/_form.html.erb (31.5ms)
+Rendered questions/new.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 160ms (Views: 43.6ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/questions" for 10.107.65.204 at 2015-06-03 22:33:22 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+6P/fJcvb42FbIFgLHhO/kGQ+W6sQNpON5WzqJmBcTM=", "question"=>{"title"=>"ror", "text"=>"asdasdasdasd", "tag_list"=>"sdaasd"}, "commit"=>"Create Question"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:33:22.545785', "perishable_token" = 'oRDNL83fmaPShvccHuM6', "updated_at" = '2015-06-04 05:33:22.546490' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("active_at", "answered", "created_at", "score", "text", "title", "updated_at", "user_id", "views") VALUES ('2015-06-04 05:33:22.616528', NULL, '2015-06-04 05:33:22.617692', 0, 'asdasdasdasd', 'ror', '2015-06-04 05:33:22.617692', 1, 0)
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (name LIKE 'sdaasd')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags"."id" FROM "tags" WHERE ("tags"."name" = 'sdaasd') LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tags" ("name") VALUES ('sdaasd')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Question')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1mSELECT "taggings".* FROM "taggings" WHERE ("taggings".taggable_id = 1 AND "taggings".taggable_type = 'Question') AND ("taggings"."tagger_type" IS NULL) AND ("taggings"."tagger_id" IS NULL) AND ("taggings"."context" = 'tags') AND ("taggings"."tag_id" IN (NULL))[0m
+  [1m[35mActsAsTaggableOn::Tagging Load (0.2ms)[0m  SELECT "taggings"."id" FROM "taggings" WHERE ("taggings"."tag_id" = 1) AND ("taggings"."taggable_type" = 'Question') AND ("taggings"."taggable_id" = 1) AND ("taggings"."context" = 'tags') AND ("taggings"."tagger_id" IS NULL) AND ("taggings"."tagger_type" IS NULL) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type", "tagger_id", "tagger_type") VALUES ('tags', '2015-06-04 05:33:22.653795', 1, 1, 'Question', NULL, NULL)[0m
+Redirected to http://10.128.95.250:3000/questions/1/answers
+Completed 302 Found in 205ms
+
+
+Started GET "/questions/1/answers" for 10.107.65.204 at 2015-06-03 22:33:22 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by AnswersController#index as HTML
+  Parameters: {"question_id"=>"1"}
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "questions" SET "updated_at" = '2015-06-04 05:33:23.042201', "views" = 1 WHERE ("questions"."id" = 1)
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 1)[0m
+  [1m[35mUser Load (2.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:33:23.157548', "perishable_token" = 'Rxpv8Sty7Yco2YmglSmk', "updated_at" = '2015-06-04 05:33:23.158187' WHERE ("users"."id" = 1)
+  [1m[36mVote Load (0.3ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes"."user_id" = 1) AND ("votes"."voteable_id" = 1) AND ("votes"."voteable_type" = 'Question') AND ("votes"."value" = 1) LIMIT 1[0m
+  [1m[35mVote Load (0.2ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes"."user_id" = 1) AND ("votes"."voteable_id" = 1) AND ("votes"."voteable_type" = 'Question') AND ("votes"."value" = -1) LIMIT 1
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".question_id = 1)
+Rendered answers/index.html.erb within layouts/application (151.6ms)
+Completed 200 OK in 232ms (Views: 148.5ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/questions" for 10.107.65.204 at 2015-06-03 22:33:30 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (0.7ms)[0m  SELECT "questions".* FROM "questions" ORDER BY created_at DESC
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 1 AND score > 0)) AS subquery[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered app/cells/question/summary.html.erb (116.8ms)
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:33:30.523903', "perishable_token" = 'qFp_l2AJ3Rs9rfUMpJi4', "updated_at" = '2015-06-04 05:33:30.524575' WHERE ("users"."id" = 1)
+Rendered questions/index.html.erb within layouts/application (173.7ms)
+Completed 200 OK in 210ms (Views: 172.1ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/questions?sorted_by=votes" for 10.107.65.204 at 2015-06-03 22:33:41 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  Parameters: {"sorted_by"=>"votes"}
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT "questions".* FROM "questions" ORDER BY score DESC
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 1 AND score > 0)) AS subquery[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered app/cells/question/summary.html.erb (128.1ms)
+  [1m[35mUser Load (3.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:33:41.334723', "perishable_token" = '6IFYgr4cJgDZZAel5d3M', "updated_at" = '2015-06-04 05:33:41.335378' WHERE ("users"."id" = 1)
+Rendered questions/index.html.erb within layouts/application (194.2ms)
+Completed 200 OK in 230ms (Views: 191.4ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/questions?sorted_by=active" for 10.107.65.204 at 2015-06-03 22:33:43 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  Parameters: {"sorted_by"=>"active"}
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (0.7ms)[0m  SELECT "questions".* FROM "questions" ORDER BY active_at DESC
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 1 AND score > 0)) AS subquery[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))
+  [1m[36mUser Load (15.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered app/cells/question/summary.html.erb (129.7ms)
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:33:43.886481', "perishable_token" = 'HyHKYJp7OQivPLcAjS44', "updated_at" = '2015-06-04 05:33:43.887086' WHERE ("users"."id" = 1)
+Rendered questions/index.html.erb within layouts/application (197.2ms)
+Completed 200 OK in 233ms (Views: 182.6ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/questions?sorted_by=views" for 10.107.65.204 at 2015-06-03 22:33:46 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  Parameters: {"sorted_by"=>"views"}
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (0.7ms)[0m  SELECT "questions".* FROM "questions" ORDER BY views DESC
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 1 AND score > 0)) AS subquery[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered app/cells/question/summary.html.erb (114.7ms)
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:33:46.520189', "perishable_token" = 'w_GP04iWWGQPcuX2MY1q', "updated_at" = '2015-06-04 05:33:46.520853' WHERE ("users"."id" = 1)
+Rendered questions/index.html.erb within layouts/application (174.6ms)
+Completed 200 OK in 210ms (Views: 173.6ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/questions/tags" for 10.107.65.204 at 2015-06-03 22:33:49 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#tags as HTML
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.4ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN questions ON questions.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Question') AND (taggings.taggable_id IN(SELECT questions.id FROM "questions")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1[0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2015-06-04 05:33:49.518252', "perishable_token" = 'o3SIU3L2Fu6hK_Z_8zVf', "updated_at" = '2015-06-04 05:33:49.518879' WHERE ("users"."id" = 1)[0m
+Rendered questions/tags.html.erb within layouts/application (91.2ms)
+Completed 200 OK in 125ms (Views: 91.2ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/badges" for 10.107.65.204 at 2015-06-03 22:33:51 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by BadgesController#index as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mVote Load (0.3ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes".user_id = 1)[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions".user_id = 1)[0m
+  [1m[35mVote Load (0.3ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".voteable_id = 1 AND "votes".voteable_type = 'Question')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "votes" WHERE ("votes".voteable_id = 1 AND "votes".voteable_type = 'Question')) AS subquery[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery
+  [1m[36mBadge Load (0.2ms)[0m  [1mSELECT "badges".* FROM "badges" WHERE ("badges".user_id = 1)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_all, name AS name FROM "badges" GROUP BY name ORDER BY name
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1[0m
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2015-06-04 05:33:51.854755', "perishable_token" = '0ig09uW7SQTLXRzFMZi2', "updated_at" = '2015-06-04 05:33:51.855419' WHERE ("users"."id" = 1)[0m
+Rendered badges/index.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 221ms (Views: 46.8ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/questions?answered=1" for 10.107.65.204 at 2015-06-03 22:33:55 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  Parameters: {"answered"=>"1"}
+  [1m[35mSQL (0.8ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" join answers on answers.question_id = questions.id WHERE (answers.score > 0) GROUP BY questions.id ORDER BY created_at DESC[0m
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:33:55.463181', "perishable_token" = 'fU62nXrs1K_9vJvGicgi', "updated_at" = '2015-06-04 05:33:55.463890' WHERE ("users"."id" = 1)
+Rendered questions/index.html.erb within layouts/application (168.9ms)
+Completed 200 OK in 204ms (Views: 168.8ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/questions?answered=0&sorted_by=newest" for 10.107.65.204 at 2015-06-03 22:33:57 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  Parameters: {"answered"=>"0", "sorted_by"=>"newest"}
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" join answers on answers.question_id = questions.id WHERE (answers.score > 0) GROUP BY questions.id
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE (questions.id NOT IN (NULL)) ORDER BY created_at DESC[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:33:57.878408', "perishable_token" = 'xy-7lN2CSq79dDU9KHYL', "updated_at" = '2015-06-04 05:33:57.879101' WHERE ("users"."id" = 1)
+Rendered questions/index.html.erb within layouts/application (98.5ms)
+Completed 200 OK in 138ms (Views: 98.2ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/questions" for 10.107.65.204 at 2015-06-03 22:39:20 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (0.8ms)[0m  SELECT "questions".* FROM "questions" ORDER BY created_at DESC
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 1 AND score > 0)) AS subquery[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered app/cells/question/summary.html.erb (155.4ms)
+  [1m[35mUser Load (2.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:39:21.089314', "perishable_token" = 'w6wqLw8HwY5UhNXGxqLf', "updated_at" = '2015-06-04 05:39:21.089961' WHERE ("users"."id" = 1)
+Rendered questions/index.html.erb within layouts/application (226.2ms)
+Completed 200 OK in 291ms (Views: 224.9ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/questions/new" for 10.107.65.204 at 2015-06-03 22:45:14 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1[0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2015-06-04 05:45:14.792872', "perishable_token" = 'p7aGqcI3pp_aUFbvKNXh', "updated_at" = '2015-06-04 05:45:14.793766' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = 'Question')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+Rendered questions/_form.html.erb (29.0ms)
+Rendered questions/new.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 195ms (Views: 41.3ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/questions" for 10.107.65.204 at 2015-06-03 22:45:29 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+6P/fJcvb42FbIFgLHhO/kGQ+W6sQNpON5WzqJmBcTM=", "question"=>{"title"=>"test1", "text"=>"stesttt dataaa", "tag_list"=>"tag1"}, "commit"=>"Create Question"}
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1
+  [1m[36mUser Load (3.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:45:29.246834', "perishable_token" = 'PADq2Gb_GqtiOUaGdTlz', "updated_at" = '2015-06-04 05:45:29.248127' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("active_at", "answered", "created_at", "score", "text", "title", "updated_at", "user_id", "views") VALUES ('2015-06-04 05:45:29.323796', NULL, '2015-06-04 05:45:29.324941', 0, 'stesttt dataaa', 'test1', '2015-06-04 05:45:29.324941', 1, 0)
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (name LIKE 'tag1')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags"."id" FROM "tags" WHERE ("tags"."name" = 'tag1') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("name") VALUES ('tag1')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'Question')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1mSELECT "taggings".* FROM "taggings" WHERE ("taggings".taggable_id = 2 AND "taggings".taggable_type = 'Question') AND ("taggings"."tagger_type" IS NULL) AND ("taggings"."tagger_id" IS NULL) AND ("taggings"."context" = 'tags') AND ("taggings"."tag_id" IN (NULL))[0m
+  [1m[35mActsAsTaggableOn::Tagging Load (0.2ms)[0m  SELECT "taggings"."id" FROM "taggings" WHERE ("taggings"."tag_id" = 2) AND ("taggings"."taggable_type" = 'Question') AND ("taggings"."taggable_id" = 2) AND ("taggings"."context" = 'tags') AND ("taggings"."tagger_id" IS NULL) AND ("taggings"."tagger_type" IS NULL) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type", "tagger_id", "tagger_type") VALUES ('tags', '2015-06-04 05:45:29.352824', 2, 2, 'Question', NULL, NULL)[0m
+Redirected to http://10.128.95.250:3000/questions/2/answers
+Completed 302 Found in 335ms
+
+
+Started GET "/questions/2/answers" for 10.107.65.204 at 2015-06-03 22:45:29 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by AnswersController#index as HTML
+  Parameters: {"question_id"=>"2"}
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.8ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "questions" SET "updated_at" = '2015-06-04 05:45:29.797369', "views" = 1 WHERE ("questions"."id" = 2)
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 2)[0m
+  [1m[35mUser Load (2.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:45:29.937408', "perishable_token" = '10SP4QlHvFBj-JL1TCPx', "updated_at" = '2015-06-04 05:45:29.938194' WHERE ("users"."id" = 1)
+  [1m[36mVote Load (0.4ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes"."user_id" = 1) AND ("votes"."voteable_id" = 2) AND ("votes"."voteable_type" = 'Question') AND ("votes"."value" = 1) LIMIT 1[0m
+  [1m[35mVote Load (0.3ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes"."user_id" = 1) AND ("votes"."voteable_id" = 2) AND ("votes"."voteable_type" = 'Question') AND ("votes"."value" = -1) LIMIT 1
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".question_id = 2)
+Rendered answers/index.html.erb within layouts/application (189.5ms)
+Completed 200 OK in 295ms (Views: 184.3ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/questions" for 10.107.65.204 at 2015-06-03 22:45:32 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (0.8ms)[0m  SELECT "questions".* FROM "questions" ORDER BY created_at DESC
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 2 AND score > 0)) AS subquery[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 2)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 2)) AS subquery[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))
+  [1m[36mUser Load (3.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered app/cells/question/summary.html.erb (128.1ms)
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 1 AND score > 0)) AS subquery
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered app/cells/question/summary.html.erb (11.4ms)
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2015-06-04 05:45:32.491887', "perishable_token" = '-_slqTkPbHCr73JVYkBN', "updated_at" = '2015-06-04 05:45:32.492603' WHERE ("users"."id" = 1)[0m
+Rendered questions/index.html.erb within layouts/application (208.6ms)
+Completed 200 OK in 245ms (Views: 204.6ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/questions/2/answers" for 10.107.65.204 at 2015-06-03 22:45:35 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by AnswersController#index as HTML
+  Parameters: {"question_id"=>"2"}
+  [1m[35mSQL (1.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "questions" SET "updated_at" = '2015-06-04 05:45:35.877331', "views" = 2 WHERE ("questions"."id" = 2)
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 2)[0m
+  [1m[35mUser Load (2.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:45:35.996183', "perishable_token" = 'HjIoHkLqyqNy3DXZsemd', "updated_at" = '2015-06-04 05:45:35.997357' WHERE ("users"."id" = 1)
+  [1m[36mVote Load (0.3ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes"."user_id" = 1) AND ("votes"."voteable_id" = 2) AND ("votes"."voteable_type" = 'Question') AND ("votes"."value" = 1) LIMIT 1[0m
+  [1m[35mVote Load (0.2ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes"."user_id" = 1) AND ("votes"."voteable_id" = 2) AND ("votes"."voteable_type" = 'Question') AND ("votes"."value" = -1) LIMIT 1
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".question_id = 2)
+Rendered answers/index.html.erb within layouts/application (150.6ms)
+Completed 200 OK in 260ms (Views: 147.1ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/questions/2/answers/new" for 10.107.65.204 at 2015-06-03 22:45:37 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by AnswersController#new as HTML
+  Parameters: {"question_id"=>"2"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2015-06-04 05:45:37.782658', "perishable_token" = 'WIzCZRtsRxEVCJWxawpX', "updated_at" = '2015-06-04 05:45:37.783265' WHERE ("users"."id" = 1)[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1[0m
+Rendered answers/_form.html.erb (18.7ms)
+Rendered answers/new.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 181ms (Views: 30.9ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/questions/2/answers" for 10.107.65.204 at 2015-06-03 22:45:46 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+6P/fJcvb42FbIFgLHhO/kGQ+W6sQNpON5WzqJmBcTM=", "answer"=>{"text"=>"answering questionnn"}, "commit"=>"Create Answer", "question_id"=>"2"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:45:46.282958', "perishable_token" = '5FfIfykXbYhreUuqMrSu', "updated_at" = '2015-06-04 05:45:46.283700' WHERE ("users"."id" = 1)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "questions" SET "active_at" = '2015-06-04 05:45:46.359172', "updated_at" = '2015-06-04 05:45:46.360043' WHERE ("questions"."id" = 2)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("created_at", "question_id", "score", "text", "updated_at", "user_id") VALUES ('2015-06-04 05:45:46.362598', 2, 0, 'answering questionnn', '2015-06-04 05:45:46.362598', 1)
+Redirected to http://10.128.95.250:3000/questions/2/answers
+Completed 302 Found in 172ms
+
+
+Started GET "/questions/2/answers" for 10.107.65.204 at 2015-06-03 22:45:46 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by AnswersController#index as HTML
+  Parameters: {"question_id"=>"2"}
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (0.7ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "questions" SET "updated_at" = '2015-06-04 05:45:46.776859', "views" = 3 WHERE ("questions"."id" = 2)[0m
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 2)
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1[0m
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2015-06-04 05:45:46.893584', "perishable_token" = 'EEcCacqrHs-JAjTnBL5q', "updated_at" = '2015-06-04 05:45:46.894324' WHERE ("users"."id" = 1)[0m
+  [1m[35mVote Load (0.2ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes"."user_id" = 1) AND ("votes"."voteable_id" = 2) AND ("votes"."voteable_type" = 'Question') AND ("votes"."value" = 1) LIMIT 1
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes"."user_id" = 1) AND ("votes"."voteable_id" = 2) AND ("votes"."voteable_type" = 'Question') AND ("votes"."value" = -1) LIMIT 1[0m
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".question_id = 2)[0m
+  [1m[35mVote Load (0.2ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes"."user_id" = 1) AND ("votes"."voteable_id" = 1) AND ("votes"."voteable_type" = 'Answer') AND ("votes"."value" = 1) LIMIT 1
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes"."user_id" = 1) AND ("votes"."voteable_id" = 1) AND ("votes"."voteable_type" = 'Answer') AND ("votes"."value" = -1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1[0m
+Rendered answers/index.html.erb within layouts/application (168.2ms)
+Completed 200 OK in 269ms (Views: 164.6ms | ActiveRecord: 10.1ms)
+
+
+Started POST "/votes" for 10.107.65.204 at 2015-06-03 22:45:51 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by VotesController#create as JSON
+  Parameters: {"vote"=>{"value"=>"1", "voteable_type"=>"Question", "voteable_id"=>"2"}}
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:45:51.501371', "perishable_token" = 'Z8iVCnaaKcC1cwRIU5Cp', "updated_at" = '2015-06-04 05:45:51.502018' WHERE ("users"."id" = 1)
+  [1m[36mVote Load (0.3ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes"."voteable_type" = 'Question') AND ("votes"."voteable_id" = 2) AND ("votes"."user_id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (0.7ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed 200 OK in 195ms (Views: 3.4ms | ActiveRecord: 7.3ms)
+
+
+Started POST "/user_session" for 10.107.65.204 at 2015-06-03 22:45:59 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+6P/fJcvb42FbIFgLHhO/kGQ+W6sQNpON5WzqJmBcTM="}
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = '637c55bcac46070226dd0554a7ad2aed8a1a552c405c4dcae79e12733f92629a4e874c903b6d12076cc5e775e95de064e922c508c55b58b4e3161355c3d58360') LIMIT 1
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:46:00.076205', "perishable_token" = 'B6X986x7AbXbBAImiZqT', "updated_at" = '2015-06-04 05:46:00.076883' WHERE ("users"."id" = 1)
+Redirected to http://10.128.95.250:3000/users
+Completed 302 Found in 90ms
+
+
+Started GET "/users" for 10.107.65.204 at 2015-06-03 22:46:00 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+
+Rendered /usr/local/rvm/gems/ruby-2.1.1@rails320/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.4ms)
+
+
+Started GET "/" for 10.107.65.204 at 2015-06-03 22:46:05 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT "questions".* FROM "questions" ORDER BY created_at DESC
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 2 AND score > 0)) AS subquery[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 2)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 2)) AS subquery[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered app/cells/question/summary.html.erb (124.0ms)
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 1 AND score > 0)) AS subquery
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered app/cells/question/summary.html.erb (13.3ms)
+Rendered questions/index.html.erb within layouts/application (186.0ms)
+Completed 200 OK in 233ms (Views: 186.7ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/user_session/new" for 10.107.65.204 at 2015-06-03 22:46:07 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by UserSessionsController#new as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_user_sessions_new_html_erb___3752530814944197513_69956666168380_1434398422500601838 at /data/work/stack_overflow_clone/app/views/user_sessions/new.html.erb:2)
+Rendered user_sessions/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 84ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 10.107.65.204 at 2015-06-03 22:46:25 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (28.6ms)
+Rendered users/new.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 100ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.107.65.204 at 2015-06-03 22:46:39 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+6P/fJcvb42FbIFgLHhO/kGQ+W6sQNpON5WzqJmBcTM=", "user"=>{"login"=>"test1", "email"=>"test@vmware.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('test@vmware.com')) LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('test1')) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."single_access_token" = '3SsHI4o9JDRA-VMY88E9') LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("birthday", "created_at", "crypted_password", "current_login_at", "current_login_ip", "email", "failed_login_count", "hometown", "last_login_at", "last_login_ip", "last_request_at", "login", "login_count", "name", "password_salt", "perishable_token", "persistence_token", "single_access_token", "updated_at") VALUES (NULL, '2015-06-04 05:46:39.151498', '658d7f64cc0bbf1b74770b427d4327db3fcb17c44be095caa219464c40a5668a5421b1d7450f072c60934849be3f3b6495dc9f84593dae42c6fbd2c8eb66572e', '2015-06-04 05:46:39.150540', '10.107.65.204', 'test@vmware.com', 0, NULL, NULL, NULL, '2015-06-04 05:46:39.150803', 'test1', 1, NULL, 'hWQ58UNDBe8y1ocIY1kC', '64knaau9guKgrxCcepDc', 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba', '3SsHI4o9JDRA-VMY88E9', '2015-06-04 05:46:39.151498')[0m
+Redirected to http://10.128.95.250:3000/account
+Completed 302 Found in 120ms
+
+
+Started GET "/account" for 10.107.65.204 at 2015-06-03 22:46:39 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by UsersController#show as HTML
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:46:39.601103', "perishable_token" = 'i7jhraUCgMxt0HmVo-mR', "updated_at" = '2015-06-04 05:46:39.601972' WHERE ("users"."id" = 2)
+  [1m[36mVote Load (0.3ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes".user_id = 2)[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions".user_id = 2)[0m
+  [1m[35mBadge Load (0.3ms)[0m  SELECT "badges".* FROM "badges" WHERE ("badges".user_id = 2)
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."user_id" = 2) ORDER BY created_at DESC[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "questions" WHERE ("questions".user_id = 2)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "questions" WHERE ("questions".user_id = 2)) AS subquery[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "badges" WHERE ("badges".user_id = 2)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "badges" WHERE ("badges".user_id = 2)) AS subquery[0m
+Rendered users/show.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 234ms (Views: 44.9ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/questions" for 10.107.65.204 at 2015-06-03 22:46:43 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  [1m[35mSQL (0.9ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (1.9ms)[0m  [1mSELECT "questions".* FROM "questions" ORDER BY created_at DESC[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 2 AND score > 0)) AS subquery
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 2)) AS subquery[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 2)) AS subquery
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))[0m
+  [1m[35mUser Load (2.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered app/cells/question/summary.html.erb (151.0ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 1 AND score > 0)) AS subquery[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered app/cells/question/summary.html.erb (11.5ms)
+  [1m[35mUser Load (2.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:46:44.302541', "perishable_token" = 'I5tzpMoPc39xcmgwSnpC', "updated_at" = '2015-06-04 05:46:44.303368' WHERE ("users"."id" = 2)
+Rendered questions/index.html.erb within layouts/application (263.5ms)
+Completed 200 OK in 310ms (Views: 260.3ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/questions/2/answers" for 10.107.65.204 at 2015-06-03 22:46:48 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by AnswersController#index as HTML
+  Parameters: {"question_id"=>"2"}
+  [1m[36mSQL (2.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "questions" SET "updated_at" = '2015-06-04 05:46:48.870951', "views" = 4 WHERE ("questions"."id" = 2)[0m
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 2)
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1[0m
+  [1m[35mUser Load (2.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2015-06-04 05:46:48.987659', "perishable_token" = '5FkrPC5727K1rb5NnJXE', "updated_at" = '2015-06-04 05:46:48.988330' WHERE ("users"."id" = 2)[0m
+  [1m[35mVote Load (0.3ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes"."user_id" = 2) AND ("votes"."voteable_id" = 2) AND ("votes"."voteable_type" = 'Question') AND ("votes"."value" = 1) LIMIT 1
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes"."user_id" = 2) AND ("votes"."voteable_id" = 2) AND ("votes"."voteable_type" = 'Question') AND ("votes"."value" = -1) LIMIT 1[0m
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE ("comments".question_id = 2)[0m
+  [1m[35mVote Load (0.3ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes"."user_id" = 2) AND ("votes"."voteable_id" = 1) AND ("votes"."voteable_type" = 'Answer') AND ("votes"."value" = 1) LIMIT 1
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes"."user_id" = 2) AND ("votes"."voteable_id" = 1) AND ("votes"."voteable_type" = 'Answer') AND ("votes"."value" = -1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered answers/index.html.erb within layouts/application (192.1ms)
+Completed 200 OK in 277ms (Views: 188.6ms | ActiveRecord: 12.2ms)
+
+
+Started POST "/votes" for 10.107.65.204 at 2015-06-03 22:46:50 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by VotesController#create as JSON
+  Parameters: {"vote"=>{"value"=>"1", "voteable_type"=>"Question", "voteable_id"=>"2"}}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1[0m
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2015-06-04 05:46:50.537004', "perishable_token" = 'eBNPaw2PG8y0ZzYrDTg2', "updated_at" = '2015-06-04 05:46:50.537739' WHERE ("users"."id" = 2)[0m
+  [1m[35mVote Load (0.3ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes"."voteable_type" = 'Question') AND ("votes"."voteable_id" = 2) AND ("votes"."user_id" = 2) LIMIT 1
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1[0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "votes" ("created_at", "updated_at", "user_id", "value", "voteable_id", "voteable_type") VALUES ('2015-06-04 05:46:50.661806', '2015-06-04 05:46:50.661806', 2, 1, 2, 'Question')[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT SUM("votes"."value") AS sum_id FROM "votes" WHERE ("votes"."voteable_id" = 2) AND ("votes"."voteable_type" = 'Question')
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "questions" SET "score" = 1, "updated_at" = '2015-06-04 05:46:50.667373' WHERE ("questions"."id" = 2)[0m
+Completed 200 OK in 239ms (Views: 3.2ms | ActiveRecord: 9.9ms)
+
+
+Started POST "/votes" for 10.107.65.204 at 2015-06-03 22:46:52 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by VotesController#create as JSON
+  Parameters: {"vote"=>{"value"=>"1", "voteable_type"=>"Answer", "voteable_id"=>"1"}}
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:46:52.650951', "perishable_token" = 'qCgh5CpjUUI-jlHeXBIe', "updated_at" = '2015-06-04 05:46:52.651754' WHERE ("users"."id" = 2)
+  [1m[36mVote Load (0.3ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes"."voteable_type" = 'Answer') AND ("votes"."voteable_id" = 1) AND ("votes"."user_id" = 2) LIMIT 1[0m
+  [1m[35mUser Load (2.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (2.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "votes" ("created_at", "updated_at", "user_id", "value", "voteable_id", "voteable_type") VALUES ('2015-06-04 05:46:52.822907', '2015-06-04 05:46:52.822907', 2, 1, 1, 'Answer')[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT SUM("votes"."value") AS sum_id FROM "votes" WHERE ("votes"."voteable_id" = 1) AND ("votes"."voteable_type" = 'Answer')
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (0.9ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "questions" SET "active_at" = '2015-06-04 05:46:52.888263', "updated_at" = '2015-06-04 05:46:52.889169' WHERE ("questions"."id" = 2)[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "answers" SET "score" = 1, "updated_at" = '2015-06-04 05:46:52.891920' WHERE ("answers"."id" = 1)
+Completed 200 OK in 332ms (Views: 3.5ms | ActiveRecord: 11.9ms)
+
+
+Started POST "/votes" for 10.107.65.204 at 2015-06-03 22:46:53 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by VotesController#create as JSON
+  Parameters: {"vote"=>{"value"=>"-1", "voteable_type"=>"Answer", "voteable_id"=>"1"}}
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2015-06-04 05:46:54.124237', "perishable_token" = 'N9Tak66FJvDPCNrjFq1U', "updated_at" = '2015-06-04 05:46:54.124903' WHERE ("users"."id" = 2)[0m
+  [1m[35mVote Load (0.4ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes"."voteable_type" = 'Answer') AND ("votes"."voteable_id" = 1) AND ("votes"."user_id" = 2) LIMIT 1
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."id" = 1) LIMIT 1
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "votes" SET "updated_at" = '2015-06-04 05:46:54.240869', "value" = -1 WHERE ("votes"."id" = 2)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT SUM("votes"."value") AS sum_id FROM "votes" WHERE ("votes"."voteable_id" = 1) AND ("votes"."voteable_type" = 'Answer')[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.8ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "questions" SET "active_at" = '2015-06-04 05:46:54.310032', "updated_at" = '2015-06-04 05:46:54.311068' WHERE ("questions"."id" = 2)
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "answers" SET "score" = -1, "updated_at" = '2015-06-04 05:46:54.313937' WHERE ("answers"."id" = 1)[0m
+Completed 200 OK in 354ms (Views: 29.0ms | ActiveRecord: 13.1ms)
+
+
+Started POST "/votes" for 10.107.65.204 at 2015-06-03 22:46:56 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by VotesController#create as JSON
+  Parameters: {"vote"=>{"value"=>"1", "voteable_type"=>"Answer", "voteable_id"=>"1"}}
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:46:56.215103', "perishable_token" = 'j4vja0WRUMhmxNE5rN3x', "updated_at" = '2015-06-04 05:46:56.215883' WHERE ("users"."id" = 2)
+  [1m[36mVote Load (0.4ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes"."voteable_type" = 'Answer') AND ("votes"."voteable_id" = 1) AND ("votes"."user_id" = 2) LIMIT 1[0m
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "votes" SET "updated_at" = '2015-06-04 05:46:56.289858', "value" = 1 WHERE ("votes"."id" = 2)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT SUM("votes"."value") AS sum_id FROM "votes" WHERE ("votes"."voteable_id" = 1) AND ("votes"."voteable_type" = 'Answer')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (0.8ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "questions" SET "active_at" = '2015-06-04 05:46:56.375505', "updated_at" = '2015-06-04 05:46:56.376419' WHERE ("questions"."id" = 2)[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "answers" SET "score" = 1, "updated_at" = '2015-06-04 05:46:56.378795' WHERE ("answers"."id" = 1)
+Completed 200 OK in 276ms (Views: 3.2ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/questions/new" for 10.107.65.204 at 2015-06-03 22:46:59 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#new as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1[0m
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2015-06-04 05:47:00.070106', "perishable_token" = 'QI-L5FrrKW7K5Jel9bnu', "updated_at" = '2015-06-04 05:47:00.070887' WHERE ("users"."id" = 2)[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = 'Question')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+Rendered questions/_form.html.erb (28.5ms)
+Rendered questions/new.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 187ms (Views: 40.3ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/questions" for 10.107.65.204 at 2015-06-03 22:47:16 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+6P/fJcvb42FbIFgLHhO/kGQ+W6sQNpON5WzqJmBcTM=", "question"=>{"title"=>"test1 -test question", "text"=>"test ", "tag_list"=>"test"}, "commit"=>"Create Question"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:47:16.421883', "perishable_token" = 'HJzsPWqV1f_goqlxjJiW', "updated_at" = '2015-06-04 05:47:16.422660' WHERE ("users"."id" = 2)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "questions" ("active_at", "answered", "created_at", "score", "text", "title", "updated_at", "user_id", "views") VALUES ('2015-06-04 05:47:16.483884', NULL, '2015-06-04 05:47:16.485515', 0, 'test ', 'test1 -test question', '2015-06-04 05:47:16.485515', 2, 0)
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (name LIKE 'test')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags"."id" FROM "tags" WHERE ("tags"."name" = 'test') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("name") VALUES ('test')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'Question')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1mSELECT "taggings".* FROM "taggings" WHERE ("taggings".taggable_id = 3 AND "taggings".taggable_type = 'Question') AND ("taggings"."tagger_type" IS NULL) AND ("taggings"."tagger_id" IS NULL) AND ("taggings"."context" = 'tags') AND ("taggings"."tag_id" IN (NULL))[0m
+  [1m[35mActsAsTaggableOn::Tagging Load (0.2ms)[0m  SELECT "taggings"."id" FROM "taggings" WHERE ("taggings"."tag_id" = 3) AND ("taggings"."taggable_type" = 'Question') AND ("taggings"."taggable_id" = 3) AND ("taggings"."context" = 'tags') AND ("taggings"."tagger_id" IS NULL) AND ("taggings"."tagger_type" IS NULL) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type", "tagger_id", "tagger_type") VALUES ('tags', '2015-06-04 05:47:16.513973', 3, 3, 'Question', NULL, NULL)[0m
+Redirected to http://10.128.95.250:3000/questions/3/answers
+Completed 302 Found in 195ms
+
+
+Started GET "/questions/3/answers" for 10.107.65.204 at 2015-06-03 22:47:16 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by AnswersController#index as HTML
+  Parameters: {"question_id"=>"3"}
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.8ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 3) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "questions" SET "updated_at" = '2015-06-04 05:47:16.943667', "views" = 1 WHERE ("questions"."id" = 3)
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 3)[0m
+  [1m[35mUser Load (2.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:47:17.063753', "perishable_token" = 'UBsc78Wxo52Fk4eMNHdg', "updated_at" = '2015-06-04 05:47:17.064641' WHERE ("users"."id" = 2)
+  [1m[36mVote Load (0.6ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes"."user_id" = 2) AND ("votes"."voteable_id" = 3) AND ("votes"."voteable_type" = 'Question') AND ("votes"."value" = 1) LIMIT 1[0m
+  [1m[35mVote Load (0.2ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes"."user_id" = 2) AND ("votes"."voteable_id" = 3) AND ("votes"."voteable_type" = 'Question') AND ("votes"."value" = -1) LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".question_id = 3)
+Rendered answers/index.html.erb within layouts/application (156.4ms)
+Completed 200 OK in 273ms (Views: 152.9ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/questions" for 10.107.65.204 at 2015-06-03 22:47:18 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (1.2ms)[0m  SELECT "questions".* FROM "questions" ORDER BY created_at DESC
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 3 AND score > 0)) AS subquery[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered app/cells/question/summary.html.erb (155.5ms)
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 2 AND score > 0)) AS subquery
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 2)) AS subquery[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 2)) AS subquery
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))[0m
+  [1m[35mUser Load (2.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered app/cells/question/summary.html.erb (14.6ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 1 AND score > 0)) AS subquery[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered app/cells/question/summary.html.erb (12.8ms)
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:47:19.258342', "perishable_token" = 'lVDr6tViofUKBm1CjUMc', "updated_at" = '2015-06-04 05:47:19.259095' WHERE ("users"."id" = 2)
+Rendered questions/index.html.erb within layouts/application (258.3ms)
+Completed 200 OK in 304ms (Views: 254.2ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/questions?sorted_by=votes" for 10.107.65.204 at 2015-06-03 22:57:02 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  Parameters: {"sorted_by"=>"votes"}
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (1.4ms)[0m  SELECT "questions".* FROM "questions" ORDER BY score DESC
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 2 AND score > 0)) AS subquery[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 2)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 2)) AS subquery[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered app/cells/question/summary.html.erb (140.5ms)
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 1 AND score > 0)) AS subquery
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered app/cells/question/summary.html.erb (10.2ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 3 AND score > 0)) AS subquery[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered app/cells/question/summary.html.erb (10.4ms)
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:57:03.041768', "perishable_token" = 'jNe2KmdHxI3oUF8TEM2W', "updated_at" = '2015-06-04 05:57:03.042477' WHERE ("users"."id" = 2)
+Rendered questions/index.html.erb within layouts/application (224.4ms)
+Completed 200 OK in 267ms (Views: 220.8ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/questions?sorted_by=active" for 10.107.65.204 at 2015-06-03 22:57:06 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  Parameters: {"sorted_by"=>"active"}
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (1.3ms)[0m  SELECT "questions".* FROM "questions" ORDER BY active_at DESC
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 3 AND score > 0)) AS subquery[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.5ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered app/cells/question/summary.html.erb (143.6ms)
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 2 AND score > 0)) AS subquery
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 2)) AS subquery[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 2)) AS subquery
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered app/cells/question/summary.html.erb (12.7ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 1 AND score > 0)) AS subquery[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered app/cells/question/summary.html.erb (8.9ms)
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:57:06.797550', "perishable_token" = '6GvzscuRz0FIpflu6kRi', "updated_at" = '2015-06-04 05:57:06.798124' WHERE ("users"."id" = 2)
+Rendered questions/index.html.erb within layouts/application (238.8ms)
+Completed 200 OK in 278ms (Views: 234.2ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/questions?sorted_by=views" for 10.107.65.204 at 2015-06-03 22:57:11 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by QuestionsController#index as HTML
+  Parameters: {"sorted_by"=>"views"}
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (1.2ms)[0m  SELECT "questions".* FROM "questions" ORDER BY views DESC
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 2 AND score > 0)) AS subquery[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 2)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 2)) AS subquery[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 2) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered app/cells/question/summary.html.erb (138.8ms)
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 1 AND score > 0)) AS subquery
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 1) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered app/cells/question/summary.html.erb (10.4ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 3 AND score > 0)) AS subquery[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered app/cells/question/summary.html.erb (11.1ms)
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 05:57:11.316725', "perishable_token" = '9_d7VCEakcmlDdaLVykf', "updated_at" = '2015-06-04 05:57:11.317440' WHERE ("users"."id" = 2)
+Rendered questions/index.html.erb within layouts/application (222.8ms)
+Completed 200 OK in 260ms (Views: 218.4ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/account/edit" for 10.107.65.204 at 2015-06-03 23:05:46 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by UsersController#edit as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1[0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2015-06-04 06:05:46.524979', "perishable_token" = 'RHxWrwwyHeu2E9c-YjK0', "updated_at" = '2015-06-04 06:05:46.525702' WHERE ("users"."id" = 2)[0m
+Rendered users/_form.html.erb (29.0ms)
+Rendered users/edit.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 142ms (Views: 41.9ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/users/2" for 10.107.65.204 at 2015-06-03 23:05:55 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+6P/fJcvb42FbIFgLHhO/kGQ+W6sQNpON5WzqJmBcTM=", "user"=>{"name"=>"test1", "hometown"=>"test", "birthday(1i)"=>"2015", "birthday(2i)"=>"6", "birthday(3i)"=>"4", "email"=>"test@vmware.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"2"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 06:05:55.578198', "perishable_token" = '5gOK3Sop5F4Exzg8coJc', "updated_at" = '2015-06-04 06:05:55.579064' WHERE ("users"."id" = 2)
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "birthday" = '2015-06-04', "hometown" = 'test', "name" = 'test1', "perishable_token" = 'SuiTcDbn-gChDMayL8FI', "updated_at" = '2015-06-04 06:05:55.595556' WHERE ("users"."id" = 2)[0m
+Redirected to http://10.128.95.250:3000/account
+Completed 302 Found in 100ms
+
+
+Started GET "/account" for 10.107.65.204 at 2015-06-03 23:05:55 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by UsersController#show as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 06:05:56.020338', "perishable_token" = 'S59ogshcf8u2QdMOtLtk', "updated_at" = '2015-06-04 06:05:56.021011' WHERE ("users"."id" = 2)
+  [1m[36mVote Load (0.5ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes".user_id = 2)[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions".user_id = 2)[0m
+  [1m[35mVote Load (0.4ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".voteable_id = 3 AND "votes".voteable_type = 'Question')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "votes" WHERE ("votes".voteable_id = 3 AND "votes".voteable_type = 'Question')) AS subquery[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery
+  [1m[36mBadge Load (0.2ms)[0m  [1mSELECT "badges".* FROM "badges" WHERE ("badges".user_id = 2)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "badges" ("created_at", "name", "updated_at", "user_id") VALUES ('2015-06-04 06:05:56.181657', 'supporter', '2015-06-04 06:05:56.181657', 2)
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."user_id" = 2) ORDER BY created_at DESC[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "questions" WHERE ("questions".user_id = 2)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "questions" WHERE ("questions".user_id = 2)) AS subquery[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 3 AND score > 0)) AS subquery
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered app/cells/question/summary.html.erb (29.6ms)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "badges" WHERE ("badges".user_id = 2)) AS subquery[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "badges" WHERE ("badges".user_id = 2)) AS subquery
+Rendered users/show.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 326ms (Views: 58.6ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/badges" for 10.107.65.204 at 2015-06-03 23:06:42 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by BadgesController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mVote Load (0.4ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".user_id = 1)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions".user_id = 1)
+  [1m[36mVote Load (0.4ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes".voteable_id = 1 AND "votes".voteable_type = 'Question')[0m
+  [1m[35mVote Load (0.2ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".voteable_id = 2 AND "votes".voteable_type = 'Question')
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "votes" WHERE ("votes".voteable_id = 1 AND "votes".voteable_type = 'Question')) AS subquery[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 1)) AS subquery
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "votes" WHERE ("votes".voteable_id = 2 AND "votes".voteable_type = 'Question')) AS subquery[0m
+  [1m[35mBadge Load (0.2ms)[0m  SELECT "badges".* FROM "badges" WHERE ("badges".user_id = 1)
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "badges" ("created_at", "name", "updated_at", "user_id") VALUES ('2015-06-04 06:06:42.668788', 'student', '2015-06-04 06:06:42.668788', 1)[0m
+  [1m[35mVote Load (0.3ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".user_id = 2)
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions".user_id = 2)[0m
+  [1m[35mVote Load (0.2ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".voteable_id = 3 AND "votes".voteable_type = 'Question')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "votes" WHERE ("votes".voteable_id = 3 AND "votes".voteable_type = 'Question')) AS subquery[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery
+  [1m[36mBadge Load (0.2ms)[0m  [1mSELECT "badges".* FROM "badges" WHERE ("badges".user_id = 2)[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "badges" WHERE ("badges"."id" = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "badges" ("created_at", "name", "updated_at", "user_id") VALUES ('2015-06-04 06:06:42.697732', 'supporter', '2015-06-04 06:06:42.697732', 2)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_all, name AS name FROM "badges" GROUP BY name ORDER BY name
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2015-06-04 06:06:42.753419', "perishable_token" = 'o56WCxXwW0Io-cKjRMWv', "updated_at" = '2015-06-04 06:06:42.754004' WHERE ("users"."id" = 2)[0m
+Rendered badges/index.html.erb within layouts/application (86.1ms)
+Completed 200 OK in 354ms (Views: 88.7ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/users/2" for 10.107.65.204 at 2015-06-03 23:07:07 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+  [1m[36mVote Load (0.4ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes".user_id = 2)[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions".user_id = 2)[0m
+  [1m[35mVote Load (0.3ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".voteable_id = 3 AND "votes".voteable_type = 'Question')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "votes" WHERE ("votes".voteable_id = 3 AND "votes".voteable_type = 'Question')) AS subquery[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery
+  [1m[36mBadge Load (0.4ms)[0m  [1mSELECT "badges".* FROM "badges" WHERE ("badges".user_id = 2)[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "badges" WHERE ("badges"."id" = 3)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "badges" ("created_at", "name", "updated_at", "user_id") VALUES ('2015-06-04 06:07:07.648375', 'supporter', '2015-06-04 06:07:07.648375', 2)[0m
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."user_id" = 2) ORDER BY created_at DESC
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "questions" WHERE ("questions".user_id = 2)) AS subquery[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "questions" WHERE ("questions".user_id = 2)) AS subquery
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 3 AND score > 0)) AS subquery[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered app/cells/question/summary.html.erb (31.7ms)
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "badges" WHERE ("badges".user_id = 2)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "badges" WHERE ("badges".user_id = 2)) AS subquery[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 06:07:07.765196', "perishable_token" = 'ttCRxGS8kR8hZunUEh8o', "updated_at" = '2015-06-04 06:07:07.765829' WHERE ("users"."id" = 2)
+Rendered users/show.html.erb within layouts/application (109.9ms)
+Completed 200 OK in 330ms (Views: 110.0ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/users/2" for 10.107.65.204 at 2015-06-03 23:13:40 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mVote Load (0.4ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".user_id = 2)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mQuestion Load (0.8ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions".user_id = 2)
+  [1m[36mVote Load (0.4ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes".voteable_id = 3 AND "votes".voteable_type = 'Question')[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "votes" WHERE ("votes".voteable_id = 3 AND "votes".voteable_type = 'Question')) AS subquery
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery[0m
+  [1m[35mBadge Load (0.4ms)[0m  SELECT "badges".* FROM "badges" WHERE ("badges".user_id = 2)
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "badges" WHERE ("badges"."id" = 4)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "badges" ("created_at", "name", "updated_at", "user_id") VALUES ('2015-06-04 06:13:41.010958', 'supporter', '2015-06-04 06:13:41.010958', 2)
+  [1m[36mQuestion Load (0.8ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."user_id" = 2) ORDER BY created_at DESC[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "questions" WHERE ("questions".user_id = 2)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "questions" WHERE ("questions".user_id = 2)) AS subquery[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 3 AND score > 0)) AS subquery
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+Rendered app/cells/question/summary.html.erb (36.6ms)
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "badges" WHERE ("badges".user_id = 2)) AS subquery[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "badges" WHERE ("badges".user_id = 2)) AS subquery
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_request_at" = '2015-06-04 06:13:41.138889', "perishable_token" = 'T854Fj9s-JYM5TAqJpEk', "updated_at" = '2015-06-04 06:13:41.139815' WHERE ("users"."id" = 2)[0m
+Rendered users/show.html.erb within layouts/application (134.5ms)
+Completed 200 OK in 457ms (Views: 134.5ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/users/2" for 10.107.65.204 at 2015-06-03 23:14:07 -0700
+DEPRECATION WARNING: Setting filter_parameter_logging in ActionController is deprecated and has no longer effect, please set 'config.filter_parameters' in config/application.rb instead. (called from <class:ApplicationController> at /data/work/stack_overflow_clone/app/controllers/application_controller.rb:5)
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+  [1m[36mVote Load (0.7ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes".user_id = 2)[0m
+  [1m[35mSQL (0.6ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.9ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions".user_id = 2)[0m
+  [1m[35mVote Load (0.3ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".voteable_id = 3 AND "votes".voteable_type = 'Question')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "votes" WHERE ("votes".voteable_id = 3 AND "votes".voteable_type = 'Question')) AS subquery[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery
+  [1m[36mBadge Load (0.3ms)[0m  [1mSELECT "badges".* FROM "badges" WHERE ("badges".user_id = 2)[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "badges" WHERE ("badges"."id" = 5)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "badges" ("created_at", "name", "updated_at", "user_id") VALUES ('2015-06-04 06:14:08.179253', 'supporter', '2015-06-04 06:14:08.179253', 2)[0m
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."user_id" = 2) ORDER BY created_at DESC
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "questions" WHERE ("questions".user_id = 2)) AS subquery[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "questions" WHERE ("questions".user_id = 2)) AS subquery
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE (question_id = 3 AND score > 0)) AS subquery[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "answers" WHERE ("answers".question_id = 3)) AS subquery[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 3) AND ("taggings".taggable_type = 'Question') AND ((taggings.tagger_id IS NULL AND taggings.context = 'tags')))
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered app/cells/question/summary.html.erb (32.5ms)
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "badges" WHERE ("badges".user_id = 2)) AS subquery
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "badges" WHERE ("badges".user_id = 2)) AS subquery[0m
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."persistence_token" = 'ac51777560e326163a4bdf9ef8794db14872c809e28246de698571b265eabef64fb55835bfd46bff668ac7499f42900ccdf87e35495f7088f29be31016a89bba') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_request_at" = '2015-06-04 06:14:08.280086', "perishable_token" = '-LoetxCvWG5btUpn5Q8G', "updated_at" = '2015-06-04 06:14:08.280823' WHERE ("users"."id" = 2)
+Rendered users/show.html.erb within layouts/application (93.3ms)
+Completed 200 OK in 361ms (Views: 93.6ms | ActiveRecord: 10.1ms)
